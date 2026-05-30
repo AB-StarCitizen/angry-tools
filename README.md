@@ -50,7 +50,7 @@ The SQLite and PostgreSQL databases share a normalized, relational structure. Th
 erDiagram
     SHIPS {
         UUID_or_INT id PK
-        VARCHAR class_name UNIQUE
+        VARCHAR class_name "unique"
         VARCHAR display_name
         TEXT description
         VARCHAR career
@@ -60,7 +60,7 @@ erDiagram
 
     COMPONENTS {
         UUID_or_INT id PK
-        VARCHAR class_name UNIQUE
+        VARCHAR class_name "unique"
         VARCHAR name
         VARCHAR type
         VARCHAR sub_type
@@ -95,9 +95,9 @@ erDiagram
         BIGINT file_size
     }
 
-    SHIPS ||--o{ SHIP_PORTS : "has"
-    SHIPS ||--o{ SHIP_DEFAULT_LOADOUTS : "has"
-    COMPONENTS ||--o{ SHIP_DEFAULT_LOADOUTS : "equipped_as"
+    SHIPS ||--o{ SHIP_PORTS : has
+    SHIPS ||--o{ SHIP_DEFAULT_LOADOUTS : has
+    COMPONENTS ||--o{ SHIP_DEFAULT_LOADOUTS : equipped_as
 ```
 
 ### Table Definitions
