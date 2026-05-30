@@ -1,0 +1,13 @@
+# Dependencies (Data-mined game files)
+libs/
+
+# Python compilation cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment configuration
+.env
+
+# Local database files
+*.db
